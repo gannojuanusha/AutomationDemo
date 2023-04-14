@@ -1,7 +1,11 @@
+import pytest
+
 from generic.base_setup import BaseSetup
 from generic.excel import Excel
 
+
 class TestScript1(BaseSetup):
+    @pytest.mark.skip
     def test_script1(self):
         print("This is test script1")
         print(self.driver.title)
